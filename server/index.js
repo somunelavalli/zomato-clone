@@ -23,6 +23,13 @@ app.use(passport.session());
 
 //Routes
 app.use("/auth/", require("./API/Auth"));
+app.use("/restaurant/", require("./API/Restaurant"));
+app.use("/food/", require("./API/Food"));
+app.use("/menu/", require("./API/Menu"));
+app.use("/image/", require("./API/Images"));
+app.use("/orders/", require("./API/Orders"));
+app.use("/reviews/", require("./API/Reviews"));
+app.use("/users/", require("./API/User"));
 
 //DB connection
 mongoose
