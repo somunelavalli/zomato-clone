@@ -1,9 +1,11 @@
 import express from "express";
 import { foodModel } from "../../database/food/index";
+import { ValidateRestaurantId, Validatecategory } from "../../Validation/food";
 const router = express.Router();
 
 router.get("/r/:_id", async (req, res) => {
   try {
+    await ValidateRestaurantId(req.params);
     const { _id } = req.params;
     const foods = await foodModel.find({ restaurant: _id });
     return res.json({ foods });
@@ -14,6 +16,7 @@ router.get("/r/:_id", async (req, res) => {
 
 router.get("/r/:category", async (req, res) => {
   try {
+    await Validatecategory(req.params);
     const { category } = req.params;
     const foods = await foodModel.find({
       category: { $regexp: category, $options: "i" },

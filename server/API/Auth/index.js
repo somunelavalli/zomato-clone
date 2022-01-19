@@ -3,12 +3,15 @@ import { userModel } from "../../database/user/index";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import passport from "passport";
+import { ValidateSignup, ValidateSignin } from "../../Validation/auth";
+
 require("dotenv").config();
 const router = express.Router();
 
 //Signup Router
 router.post("/register", async (req, res) => {
   try {
+    await ValidateSignup(req.body);
     const { email, password, fullname, phoneNumber } = req.body;
     const checkUserByEmail = await userModel.findOne({ email });
     const checkUserByPhone = await userModel.findOne({ phoneNumber });
@@ -42,6 +45,7 @@ router.post("/register", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   try {
+    await ValidateSignin(req.body);
     const user = await userModel.findOne({ email: req.body.email });
     !user && res.status(400).json("User not found with this email");
 

@@ -6,6 +6,7 @@ import helmet from "helmet";
 import passport from "passport";
 import session from "express-session";
 import googleAuthConfig from "./config/google.config";
+import routerConfig from "./config/route.config";
 
 const port = process.env.PORT || 4100;
 const app = express();
