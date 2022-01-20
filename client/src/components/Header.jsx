@@ -26,7 +26,7 @@ function MobileNav({ user, isDropdownOpen, setIsDropdownOpen }) {
                 className="border p-2 border-gray-300 text-zomato-400 w-16 h-16 rounded-full"
               >
                 <img
-                  src="https://cdn-icons.flaticon.com/png/512/706/premium/706807.png?token=exp=1642684921~hmac=792944c6ce89bc2fb1a6b665f0499525"
+                  src="https://img.icons8.com/color/344/boy-avatar.png"
                   alt="avatar"
                   className="w-full h-full rounded-full object-cover"
                 />
@@ -100,7 +100,7 @@ function LargeNav({ user, isDropdownOpen, setIsDropdownOpen }) {
                 className="border p-2 border-gray-300 text-zomato-400 w-full h-14 rounded-full"
               >
                 <img
-                  src="https://cdn-icons.flaticon.com/png/512/706/premium/706807.png?token=exp=1642684921~hmac=792944c6ce89bc2fb1a6b665f0499525"
+                  src="https://img.icons8.com/color/344/boy-avatar.png"
                   alt="avatar"
                   className="w-full h-full rounded-full object-cover"
                 />

@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" exact element={<HomePage />} />
+          <Route path="/:type" exact element={<HomePage />} />
         </Routes>
       </Router>
     </div>

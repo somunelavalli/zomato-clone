@@ -5,7 +5,7 @@ function Layout(props) {
   return (
     <div>
       <Header />
-      <div className="container mx-auto px-4 lg:px-20">{props.children}</div>
+      <div className="container mx-auto lg:px-20">{props.children}</div>
     </div>
   );
 }
